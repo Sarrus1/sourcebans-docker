@@ -6,7 +6,7 @@ set -euo pipefail
 
 # Copy Sourcebans sourcecode to docroot
 if [ "true" == "$UPDATE_SRC" ] || [ -z "$(ls -A /var/www/html/)" ]; then
-    cp -R /usr/src/sourcebans-${SOURCEBANS_VERSION}/* /var/www/html/
+    cp -R /usr/src/sourcebans/* /var/www/html/
 fi
 
 # If $REMOVE_SETUP_DIRS is set remove the install and updater directories if they exist
